@@ -11,26 +11,26 @@ class App extends Component {
 
     this.state = {
       newUserName: ''
-    }
+    };
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleClick() {
-    this.props.logInUser(this.state.newUserName)
+    this.props.logInUser(this.state.newUserName);
   }
 
   handleChange(event) {
     this.setState({
       newUserName: event.target.value
-    })
+    });
   }
 
   render() {
     return (
       <div className="App">
         <div className="App-header">
-      
+
           <h2>Welcome to React</h2>
         </div>
         <h1>Logged In as: {this.props.userName}</h1>
@@ -45,11 +45,11 @@ class App extends Component {
 function mapStateToProps(state) {
   return {
     userName: state.userName
-  }
+  };
 }
 
 const mapDispatchToActionProviders = {
   logInUser: logInUser
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToActionProviders)(App);

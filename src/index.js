@@ -7,7 +7,7 @@ import App from './App';
 
 ReactDOM.hydrate(
   <Provider store={store}>
-  <App />
+    <App />
   </Provider>,
   document.getElementById('root')
 );
