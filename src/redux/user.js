@@ -10,7 +10,7 @@ export default function reducer(state=initialState, action) {
     return {
       userName: action.payload
     }
-    default:
+  default:
     return state;
   }
 }
